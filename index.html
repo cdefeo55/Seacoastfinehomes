@@ -8,6 +8,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="theme-color" content="#14283b">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVX4M7XQ7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CVX4M7XQ7X');
+</script>
 
 <!-- ===================== SEO: PRIMARY META ===================== -->
 <title>Chantal O'Hare | Seacoast NH Real Estate Agent | Tate &amp; Foss Sotheby's</title>
@@ -888,6 +897,36 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+
+  // Smooth in-page anchor scrolling without leaving #section in the URL.
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const headerOffset = 72;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+
+      const cleanPath = window.location.pathname.endsWith('/index.html')
+        ? window.location.pathname.replace(/index\.html$/, '')
+        : window.location.pathname;
+
+      history.replaceState(null, '', cleanPath + window.location.search);
+    });
+  });
 
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
