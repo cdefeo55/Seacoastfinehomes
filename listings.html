@@ -42,7 +42,7 @@
   "image": "https://www.seacoastfinehomes.com/chantal.jpg",
   "url": "https://www.seacoastfinehomes.com/",
   "telephone": "+1-603-000-0000",
-  "email": "cohare@tateandfost.com",
+  "email": "cohare@tateandfoss.com",
   "jobTitle": "Real Estate Agent",
   "worksFor": {
     "@type": "RealEstateAgent",
@@ -440,7 +440,7 @@
     <div class="sales-grid">
 
       <article class="sale-card reveal">
-        <div class="sale-image"><span>Rye Signature Sale</span></div>
+        <div class="sale-image" style="padding:0;background:none"><img src="cable-road.png" alt="16 Cable Road, Rye NH" style="width:100%;height:100%;object-fit:cover;display:block;min-height:210px"></div>
         <div class="sale-content">
           <p class="sale-location">Rye, New Hampshire</p>
           <h3>16 Cable Road</h3>
@@ -450,7 +450,7 @@
       </article>
 
       <article class="sale-card reveal">
-        <div class="sale-image"><span>Jenness Beach Area</span></div>
+        <div class="sale-image" style="padding:0;background:none"><img src="spruce-ave.png" alt="6 Spruce Avenue, Rye NH" style="width:100%;height:100%;object-fit:cover;display:block;min-height:210px"></div>
         <div class="sale-content">
           <p class="sale-location">Rye, New Hampshire</p>
           <h3>6 Spruce Avenue</h3>
@@ -460,7 +460,7 @@
       </article>
 
       <article class="sale-card reveal">
-        <div class="sale-image"><span>Stratham Sale</span></div>
+        <div class="sale-image" style="padding:0;background:none"><img src="patriots-road.png" alt="20 Patriots Road, Stratham NH" style="width:100%;height:100%;object-fit:cover;display:block;min-height:210px"></div>
         <div class="sale-content">
           <p class="sale-location">Stratham, New Hampshire</p>
           <h3>20 Patriots Road</h3>
@@ -722,7 +722,7 @@
   function handleLead(e) {
     e.preventDefault();
     const v = id => (document.getElementById(id).value || '').trim();
-    const to = 'cohare@tateandfost.com'; // TODO: replace with Chantal's real email
+    const to = 'cohare@tateandfoss.com'; // TODO: replace with Chantal's real email
     const subject = `Website inquiry: ${v('intent')} — ${v('name')}`;
     const body =
       `Name: ${v('name')}\n` +
@@ -771,7 +771,7 @@
   function handleLead(e) {
     e.preventDefault();
     const v = id => (document.getElementById(id).value || '').trim();
-    const to = 'cohare@tateandfost.com'; // TODO: replace with Chantal's real email
+    const to = 'cohare@tateandfoss.com'; // TODO: replace with Chantal's real email
     const subject = `Website inquiry: ${v('intent')} — ${v('name')}`;
     const body =
       `Name: ${v('name')}\n` +
