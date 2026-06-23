@@ -1,43 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://seacoastfinehomes.com/</loc>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://seacoastfinehomes.com/about.html</loc>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://seacoastfinehomes.com/listings.html</loc>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://seacoastfinehomes.com/testimonials.html</loc>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/contact.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/buy.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/sell.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/home-valuation.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/seacoast-communities.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://seacoastfinehomes.com/resources.html</loc>
-    <priority>0.7</priority>
-  </url>
+
 </urlset>
