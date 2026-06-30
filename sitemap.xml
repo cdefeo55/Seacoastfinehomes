@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://seacoastfinehomes.com/</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://seacoastfinehomes.com/about.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seacoastfinehomes.com/listings.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seacoastfinehomes.com/testimonials.html</loc>
-    <priority>0.8</priority>
-  </url>
-
+  <url><loc>https://www.seacoastfinehomes.com/about.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/buy.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/dover.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/durham.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/exeter.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/greenland.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/hampton-falls.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/hampton.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/new-castle.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/north-hampton.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/portsmouth.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/rye.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/seabrook.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/stratham.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/communities.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/contact.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/home-valuation.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/listings.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/seller-checklist.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/resources.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/sell.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/testimonials.html</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/thank-you.html</loc></url>
 </urlset>
