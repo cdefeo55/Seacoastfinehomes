@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://seacoastfinehomes.com/about</loc></url>
-  <url><loc>https://seacoastfinehomes.com/buy</loc></url>
-  <url><loc>https://seacoastfinehomes.com/dover</loc></url>
-  <url><loc>https://seacoastfinehomes.com/durham</loc></url>
-  <url><loc>https://seacoastfinehomes.com/exeter</loc></url>
-  <url><loc>https://seacoastfinehomes.com/greenland</loc></url>
-  <url><loc>https://seacoastfinehomes.com/hampton-falls</loc></url>
-  <url><loc>https://seacoastfinehomes.com/hampton</loc></url>
-  <url><loc>https://seacoastfinehomes.com/new-castle</loc></url>
-  <url><loc>https://seacoastfinehomes.com/north-hampton</loc></url>
-  <url><loc>https://seacoastfinehomes.com/portsmouth</loc></url>
-  <url><loc>https://seacoastfinehomes.com/rye</loc></url>
-  <url><loc>https://seacoastfinehomes.com/seabrook</loc></url>
-  <url><loc>https://seacoastfinehomes.com/stratham</loc></url>
-  <url><loc>https://seacoastfinehomes.com/communities</loc></url>
-  <url><loc>https://seacoastfinehomes.com/contact</loc></url>
-  <url><loc>https://seacoastfinehomes.com/home-valuation</loc></url>
-  <url><loc>https://seacoastfinehomes.com/</loc></url>
-  <url><loc>https://seacoastfinehomes.com/listings</loc></url>
-  <url><loc>https://seacoastfinehomes.com/seller-checklist</loc></url>
-  <url><loc>https://seacoastfinehomes.com/resources</loc></url>
-  <url><loc>https://seacoastfinehomes.com/sell</loc></url>
-  <url><loc>https://seacoastfinehomes.com/testimonials</loc></url>
-  <url><loc>https://seacoastfinehomes.com/thank-you</loc></url>
+  <url><loc>https://www.seacoastfinehomes.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.seacoastfinehomes.com/about.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.seacoastfinehomes.com/listings.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.seacoastfinehomes.com/testimonials.html</loc><priority>0.8</priority></url>
 </urlset>
