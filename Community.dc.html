@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="./support.js"></script>
+<style data-site-mobile-perfect>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img { max-width: 100%; height: auto; }
+  a { -webkit-tap-highlight-color: transparent; }
+
+  .sothebys-reach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+  }
+  .sothebys-stat {
+    min-width: 0 !important;
+    text-align: center !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .sothebys-stat-label {
+    line-height: 1.32 !important;
+    max-width: 150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  @media (max-width: 760px) {
+    [style*="calc(100% - 48px)"] { width: min(100% - 32px, 1240px) !important; }
+    [style*="min-width: 320px"], [style*="min-width: 300px"], [style*="min-width: 290px"] { min-width: 0 !important; }
+    [style*="grid-template-columns: minmax(0, 1.08fr)"] { grid-template-columns: 1fr !important; }
+    [style*="background-attachment: fixed"] { background-attachment: scroll !important; }
+    a[style*="padding: 18px 44px"], a[style*="padding: 17px 36px"], a[style*="padding: 16px 32px"] {
+      width: 100% !important;
+      text-align: center !important;
+    }
+    .sothebys-affiliation-card { padding: 26px 20px !important; }
+    .sothebys-affiliation-card img { width: min(100%, 340px) !important; }
+    .sothebys-reach-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+      padding-top: 22px !important;
+    }
+    .sothebys-stat {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: baseline !important;
+      justify-content: space-between !important;
+      gap: 18px !important;
+      text-align: left !important;
+      padding: 15px 0 !important;
+      border-bottom: 1px solid rgba(23,49,41,0.10) !important;
+    }
+    .sothebys-stat:last-child { border-bottom: 0 !important; }
+    .sothebys-stat-figure {
+      font-size: 2.05rem !important;
+      white-space: nowrap !important;
+      flex: 0 0 auto !important;
+    }
+    .sothebys-stat-label {
+      text-align: right !important;
+      max-width: 150px !important;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    [style*="calc(100% - 48px)"] { width: min(100% - 26px, 1240px) !important; }
+    .sothebys-stat { gap: 14px !important; }
+    .sothebys-stat-figure { font-size: 1.85rem !important; }
+    .sothebys-stat-label { font-size: 0.62rem !important; letter-spacing: 0.11em !important; }
+  }
+</style>
+
+
+
+<style data-final-mobile-polish>
+  .site-brand-name { white-space: nowrap; }
+  .site-broker-link { white-space: normal; }
+  .sothebys-stat { text-align: center; min-width: 0; }
+  .sothebys-stat-label { line-height: 1.25 !important; }
+
+  @media (max-width: 760px) {
+    .site-header { padding-top: env(safe-area-inset-top) !important; }
+    .site-nav { width: min(100% - 32px, 1240px) !important; padding: 18px 0 14px !important; gap: 13px !important; }
+    .site-brand-row { width: 100% !important; justify-content: center !important; }
+    .site-brand-text { max-width: calc(100vw - 96px) !important; }
+    .site-brand-name { font-size: 1rem !important; letter-spacing: 0.12em !important; }
+    .site-broker-link { font-size: 0.5rem !important; letter-spacing: 0.14em !important; opacity: 0.95 !important; }
+    .site-menu { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; width: 100% !important; }
+    .site-menu a { font-size: 0.6rem !important; letter-spacing: 0.055em !important; padding: 10px 6px !important; min-height: 38px !important; white-space: normal !important; line-height: 1.15 !important; }
+    .site-menu a.site-menu-cta { grid-column: auto !important; min-height: 38px !important; padding: 10px 6px !important; }
+
+    .brokerage-section { padding: 58px 0 64px !important; }
+    .brokerage-section > div { width: min(100% - 32px, 1180px) !important; display: block !important; }
+    .brokerage-copy { margin-bottom: 26px !important; }
+    .brokerage-copy > p:first-child { font-size: 0.62rem !important; letter-spacing: 0.18em !important; line-height: 1.55 !important; margin-bottom: 14px !important; }
+    .brokerage-copy h2 { font-size: clamp(1.95rem, 10vw, 2.55rem) !important; line-height: 1.02 !important; margin-bottom: 16px !important; }
+    .brokerage-copy p { font-size: 0.98rem !important; line-height: 1.62 !important; }
+    .brokerage-copy p[style*="Cormorant"] { font-size: 1.24rem !important; line-height: 1.28 !important; margin-bottom: 16px !important; }
+    .sothebys-affiliation-card { padding: 24px 20px !important; box-shadow: 0 18px 42px rgba(23,49,41,0.08) !important; }
+    .sothebys-affiliation-card img { width: min(100%, 300px) !important; }
+    .sothebys-affiliation-card a[aria-label] { margin-bottom: 22px !important; }
+    .sothebys-affiliation-card > span { font-size: 0.62rem !important; letter-spacing: 0.16em !important; margin-bottom: 16px !important; }
+    .sothebys-affiliation-card div[style*="display: grid; gap: 14px"] { gap: 12px !important; margin-bottom: 24px !important; }
+    .sothebys-affiliation-card div[style*="display: flex; gap: 14px"] { gap: 10px !important; }
+    .sothebys-affiliation-card div[style*="display: flex; gap: 14px"] p { font-size: 0.92rem !important; line-height: 1.45 !important; }
+    .sothebys-reach-grid { grid-template-columns: 1fr !important; gap: 0 !important; padding-top: 18px !important; }
+    .sothebys-stat { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 16px !important; text-align: left !important; padding: 13px 0 !important; border-bottom: 1px solid rgba(23,49,41,0.1) !important; }
+    .sothebys-stat:last-child { border-bottom: 0 !important; }
+    .sothebys-stat-figure { font-size: 2.05rem !important; min-width: 104px !important; }
+    .sothebys-stat-label { text-align: right !important; font-size: 0.62rem !important; letter-spacing: 0.11em !important; max-width: 135px !important; }
+    .sothebys-affiliation-card > p:last-child { font-size: 0.72rem !important; line-height: 1.45 !important; margin-top: 14px !important; }
+  }
+</style>
+
+
+<style data-hidden-gem-section>
+  .hidden-gem-section {
+    position: relative;
+    overflow: hidden;
+    background: #fffdf8;
+    padding: clamp(78px, 9vw, 118px) 0;
+    border-top: 1px solid rgba(23,49,41,0.10);
+    border-bottom: 1px solid rgba(23,49,41,0.08);
+  }
+  .hidden-gem-section::before {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -220px;
+    width: 460px;
+    height: 460px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(176,141,87,0.16), rgba(176,141,87,0));
+    pointer-events: none;
+  }
+  .hidden-gem-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+  .hidden-gem-intro {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+    gap: clamp(28px, 5vw, 70px);
+    align-items: end;
+    margin-bottom: clamp(34px, 5vw, 54px);
+  }
+  .hidden-gem-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+    color: #b08d57;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  .hidden-gem-eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: #b08d57;
+    display: inline-block;
+  }
+  .hidden-gem-heading {
+    margin: 0;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.25rem, 4.8vw, 4rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  .hidden-gem-subcopy {
+    margin: 0;
+    color: #4a4f46;
+    font-size: clamp(1rem, 1.35vw, 1.13rem);
+    line-height: 1.72;
+    max-width: 620px;
+  }
+  .hidden-gem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+    gap: 22px;
+    align-items: stretch;
+    max-width: 1080px;
+  }
+  .hidden-gem-grid.is-single { max-width: 860px; }
+  .hidden-gem-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: #f4ede1;
+    border: 1px solid rgba(176,141,87,0.36);
+    border-radius: 4px;
+    padding: clamp(30px, 4vw, 46px);
+    box-shadow: 0 22px 55px rgba(23,49,41,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .hidden-gem-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: linear-gradient(90deg, #173129, #b08d57);
+  }
+  .hidden-gem-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .hidden-gem-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: #173129;
+    color: #f4ede1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    flex: 0 0 auto;
+  }
+  .hidden-gem-type {
+    margin: 0;
+    color: #b08d57;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .hidden-gem-title {
+    margin: 0 0 18px;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.02;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .hidden-gem-copy {
+    margin: 0 0 28px;
+    color: #4a4f46;
+    font-size: 1.04rem;
+    line-height: 1.72;
+    flex: 1;
+  }
+  .hidden-gem-link {
+    display: inline-block;
+    align-self: flex-start;
+    text-decoration: none;
+    background: #173129;
+    color: #f4ede1;
+    border: 1px solid #173129;
+    padding: 14px 24px;
+    border-radius: 2px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .hidden-gem-link:hover {
+    background: #b08d57;
+    border-color: #b08d57;
+    color: #fffdf8;
+  }
+  @media (max-width: 760px) {
+    .hidden-gem-section { padding: 64px 0; }
+    .hidden-gem-inner { width: min(100% - 32px, 1080px); }
+    .hidden-gem-intro { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
+    .hidden-gem-eyebrow { font-size: 0.64rem; letter-spacing: 0.22em; margin-bottom: 12px; }
+    .hidden-gem-eyebrow::before { width: 26px; }
+    .hidden-gem-heading { font-size: clamp(2.15rem, 12vw, 3rem); }
+    .hidden-gem-subcopy { font-size: 0.98rem; line-height: 1.62; }
+    .hidden-gem-grid, .hidden-gem-grid.is-single { grid-template-columns: 1fr; gap: 16px; max-width: none; }
+    .hidden-gem-card { padding: 30px 22px 26px; }
+    .hidden-gem-card-top { align-items: flex-start; margin-bottom: 20px; }
+    .hidden-gem-number { width: 38px; height: 38px; }
+    .hidden-gem-type { font-size: 0.62rem; letter-spacing: 0.13em; max-width: 160px; }
+    .hidden-gem-title { font-size: clamp(2rem, 11vw, 2.65rem); margin-bottom: 14px; }
+    .hidden-gem-copy { font-size: 0.98rem; line-height: 1.64; margin-bottom: 24px; }
+    .hidden-gem-link { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+  }
+</style>
+
+
+<style data-hidden-gem-page-styles>
+  /* Hidden Gem sections are rendered from Community.dc.html, so these styles live on the public pages where browsers reliably load them. */
+  .hidden-gem-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #fffdf8 0%, #f8f1e7 100%);
+    padding: clamp(78px, 9vw, 118px) 0;
+    border-top: 1px solid rgba(23,49,41,0.10);
+    border-bottom: 1px solid rgba(23,49,41,0.08);
+  }
+  .hidden-gem-section::before {
+    content: "";
+    position: absolute;
+    right: -170px;
+    top: -210px;
+    width: 440px;
+    height: 440px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(176,141,87,0.18), rgba(176,141,87,0));
+    pointer-events: none;
+  }
+  .hidden-gem-section::after {
+    content: "";
+    position: absolute;
+    left: -220px;
+    bottom: -260px;
+    width: 520px;
+    height: 520px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(23,49,41,0.08), rgba(23,49,41,0));
+    pointer-events: none;
+  }
+  .hidden-gem-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1080px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+  .hidden-gem-intro {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+    gap: clamp(30px, 5vw, 72px);
+    align-items: end;
+    margin-bottom: clamp(34px, 5vw, 54px);
+  }
+  .hidden-gem-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+    color: #b08d57;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  .hidden-gem-eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: #b08d57;
+    display: inline-block;
+  }
+  .hidden-gem-heading {
+    margin: 0;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.25rem, 4.8vw, 4rem);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  .hidden-gem-subcopy {
+    margin: 0;
+    color: #4a4f46;
+    font-size: clamp(1rem, 1.35vw, 1.13rem);
+    line-height: 1.72;
+    max-width: 620px;
+  }
+  .hidden-gem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+    gap: 22px;
+    align-items: stretch;
+    max-width: 1080px;
+  }
+  .hidden-gem-grid.is-single {
+    max-width: 760px;
+  }
+  .hidden-gem-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: rgba(255,253,248,0.94);
+    border: 1px solid rgba(176,141,87,0.34);
+    border-radius: 6px;
+    padding: clamp(30px, 4vw, 46px);
+    box-shadow: 0 22px 55px rgba(23,49,41,0.09);
+    display: flex;
+    flex-direction: column;
+  }
+  .hidden-gem-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: linear-gradient(90deg, #173129, #b08d57);
+  }
+  .hidden-gem-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .hidden-gem-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: #173129;
+    color: #f4ede1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    flex: 0 0 auto;
+  }
+  .hidden-gem-type {
+    margin: 0;
+    color: #b08d57;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .hidden-gem-title {
+    margin: 0 0 18px;
+    color: #173129;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.02;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .hidden-gem-copy {
+    margin: 0 0 28px;
+    color: #4a4f46;
+    font-size: 1.04rem;
+    line-height: 1.72;
+    flex: 1;
+  }
+  .hidden-gem-link {
+    display: inline-block;
+    align-self: flex-start;
+    text-decoration: none;
+    background: #173129;
+    color: #f4ede1;
+    border: 1px solid #173129;
+    padding: 14px 24px;
+    border-radius: 2px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .hidden-gem-link:hover {
+    background: #b08d57;
+    border-color: #b08d57;
+    color: #fffdf8;
+    transform: translateY(-1px);
+  }
+  @media (max-width: 760px) {
+    .hidden-gem-section { padding: 64px 0; }
+    .hidden-gem-inner { width: min(100% - 32px, 1080px); }
+    .hidden-gem-intro { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
+    .hidden-gem-eyebrow { font-size: 0.64rem; letter-spacing: 0.22em; margin-bottom: 12px; }
+    .hidden-gem-eyebrow::before { width: 26px; }
+    .hidden-gem-heading { font-size: clamp(2.15rem, 12vw, 3rem); }
+    .hidden-gem-subcopy { font-size: 0.98rem; line-height: 1.62; }
+    .hidden-gem-grid, .hidden-gem-grid.is-single { grid-template-columns: 1fr; gap: 16px; max-width: none; }
+    .hidden-gem-card { padding: 30px 22px 26px; }
+    .hidden-gem-card-top { align-items: flex-start; margin-bottom: 20px; }
+    .hidden-gem-number { width: 38px; height: 38px; }
+    .hidden-gem-type { font-size: 0.62rem; letter-spacing: 0.13em; max-width: 160px; }
+    .hidden-gem-title { font-size: clamp(2rem, 11vw, 2.65rem); margin-bottom: 14px; }
+    .hidden-gem-copy { font-size: 0.98rem; line-height: 1.64; margin-bottom: 24px; }
+    .hidden-gem-link { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WMCB28YDX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7WMCB28YDX');
+</script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style> body { margin: 0; } </style>
+</helmet>
+<div style="font-family: 'Mulish', system-ui, sans-serif; color: #23271f; background: #f4ede1; line-height: 1.65; overflow-x: hidden;">
+
+  <dc-import name="SiteHeader" hint-size="100%,84px"></dc-import>
+
+  <!-- HERO -->
+  <section style="background: #f4ede1; padding: clamp(64px, 8vw, 110px) 0 clamp(70px, 9vw, 120px);">
+    <div style="width: min(900px, calc(100% - 48px)); margin: 0 auto;">
+      <p style="margin: 0 0 20px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">{{ town.region }} &middot; Four Seasons Sotheby\'s</p>
+      <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2.8rem, 6.5vw, 5.4rem); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 28px;">{{ town.name }} Real Estate</h1>
+      <p style="color: #4a4f46; font-size: clamp(1.08rem, 1.7vw, 1.32rem); margin: 0 0 34px; max-width: 700px;">{{ town.lede }}</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="index.html#contact" style="text-decoration: none; background: #173129; color: #f4ede1; padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #b08d57; color: #fffdf8;">Talk About {{ town.name }}</a>
+        <a href="index.html#communities" style="text-decoration: none; background: transparent; color: #173129; border: 1px solid rgba(23,49,41,0.3); padding: 16px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: .25s ease;" style-hover="border-color: #b08d57; color: #b08d57;">All Communities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY PHOTO -->
+  <section style="{{ town.photoSectionStyle }}">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <figure style="margin: 0; border-radius: 4px; overflow: hidden; box-shadow: 0 28px 70px rgba(23,49,41,0.14); background: #173129;">
+        <img src="{{ town.photo }}" alt="{{ town.photoAlt }}" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+      </figure>
+      <p style="margin: 14px 0 0; color: #6b6f65; font-size: 0.82rem; letter-spacing: 0.04em;">{{ town.photoCaption }}</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section style="background: #fffdf8; padding: clamp(80px, 10vw, 130px) 0; border-top: 1px solid rgba(23,49,41,0.1);">
+    <div style="width: min(820px, calc(100% - 48px)); margin: 0 auto;">
+      <p style="margin: 0 0 18px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">Local Perspective</p>
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 30px;">{{ town.overviewTitle }}</h2>
+      <sc-for list="{{ town.overview }}" as="para" hint-placeholder-count="2">
+        <p style="color: #4a4f46; font-size: 1.1rem; margin: 0 0 22px;">{{ para }}</p>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- VALUE CARDS -->
+  <section style="background: #f4ede1; padding: clamp(80px, 10vw, 130px) 0;">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <div style="max-width: 660px; margin: 0 0 50px;">
+        <p style="margin: 0 0 18px; color: #b08d57; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.32em; text-transform: uppercase;">What Shapes Value</p>
+        <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #173129; font-size: clamp(2rem, 3.8vw, 3.2rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0;">Details that matter in {{ town.name }}.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;">
+        <sc-for list="{{ town.cards }}" as="c" hint-placeholder-count="3">
+          <article style="background: #fffdf8; border: 1px solid rgba(23,49,41,0.1); border-radius: 3px; padding: 40px 34px;">
+            <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; color: #173129; font-size: 1.55rem; letter-spacing: -0.01em; margin: 0 0 12px;">{{ c.title }}</h3>
+            <p style="color: #5a5f55; font-size: 1.02rem; margin: 0;">{{ c.body }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- SKY'S HIDDEN GEMS -->
+  <section class="hidden-gem-section" style="{{ town.hiddenGemSectionStyle }}">
+    <div class="hidden-gem-inner">
+      <div class="hidden-gem-intro">
+        <div>
+          <p class="hidden-gem-eyebrow">Sky's Hidden Gem</p>
+          <h2 class="hidden-gem-heading">A local note for {{ town.name }}.</h2>
+        </div>
+        <p class="hidden-gem-subcopy">A personal recommendation I would give a client who wants to understand the area beyond the listing photos — the places, views, and stops that make this part of Vermont feel distinct.</p>
+      </div>
+      <div class="hidden-gem-grid {{ town.hiddenGemLayout }}">
+        <sc-for list="{{ town.hiddenGems }}" as="gem" hint-placeholder-count="2">
+          <article class="hidden-gem-card">
+            <div class="hidden-gem-card-top">
+              <span class="hidden-gem-number">{{ gem.number }}</span>
+              <p class="hidden-gem-type">{{ gem.label }}</p>
+            </div>
+            <h3 class="hidden-gem-title">{{ gem.name }}</h3>
+            <p class="hidden-gem-copy">{{ gem.copy }}</p>
+            <a class="hidden-gem-link" href="{{ gem.url }}" target="_blank" rel="noopener noreferrer" style="{{ gem.linkStyle }}">{{ gem.ctaLabel }}</a>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER COMMUNITIES -->
+  <section style="background: #173129; padding: clamp(80px, 10vw, 120px) 0;">
+    <div style="width: min(1180px, calc(100% - 48px)); margin: 0 auto;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #fffdf8; font-size: clamp(1.9rem, 3.6vw, 2.9rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 40px;">Explore other Vermont communities.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <sc-for list="{{ others }}" as="o" hint-placeholder-count="8">
+          <a href="{{ o.href }}" style="text-decoration: none; background: rgba(255,253,248,0.06); border: 1px solid rgba(255,253,248,0.22); color: #fffdf8; padding: 13px 22px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; transition: .25s ease;" style-hover="background: #b08d57; border-color: #b08d57;">{{ o.name }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="position: relative; background-image: url('lake-champlain.jpg'); background-size: cover; background-position: center 55%;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,32,27,0.78), rgba(14,32,27,0.62));"></div>
+    <div style="position: relative; z-index: 2; width: min(820px, calc(100% - 48px)); margin: 0 auto; padding: clamp(80px, 10vw, 130px) 0; text-align: center;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; color: #fffdf8; font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 24px;">Buying or selling in {{ town.name }}?</h2>
+      <p style="color: rgba(255,253,248,0.85); font-size: 1.1rem; max-width: 560px; margin: 0 auto 36px;">Start with a clear, private conversation about your goals, backed by my local perspective and the platform of Four Seasons Sotheby\'s International Realty.</p>
+      <a href="index.html#contact" style="text-decoration: none; display: inline-block; background: #b08d57; color: #fffdf8; padding: 18px 44px; border-radius: 2px; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; transition: background .25s ease;" style-hover="background: #c9a877;">Contact Me</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;stowe&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;stowe&quot;,&quot;waterbury&quot;,&quot;jay-peak&quot;,&quot;shelburne&quot;,&quot;charlotte&quot;,&quot;burlington&quot;,&quot;south-burlington&quot;,&quot;stratton&quot;,&quot;williston&quot;,&quot;jericho&quot;,&quot;richmond&quot;,&quot;hinesburg&quot;,&quot;colchester&quot;,&quot;south-hero&quot;,&quot;winooski&quot;,&quot;essex&quot;],&quot;section&quot;:&quot;Community&quot;}}">
+const TOWNS = {
+  stowe: {
+    name: 'Stowe', region: 'Stowe \u00b7 Vermont',
+    lede: "One of Vermont\'s most recognized mountain markets, anchored by Mount Mansfield, a walkable village, and year-round recreation \u2014 where lifestyle and resort economics drive value together.",
+    photo: 'stowe-vt-real-estate.png',
+    photoAlt: 'Aerial view of Stowe Vermont in autumn with Mount Mansfield in the distance',
+    photoCaption: 'Stowe, Vermont',
+    hiddenGems: [{
+      name: 'Ranch Camp',
+      label: 'Restaurant worth the stop',
+      url: 'https://www.ranchcampvt.com/',
+      copy: "If I am sending someone somewhere for a relaxed meal in Stowe, Ranch Camp is an easy recommendation. It blends a casual restaurant with Stowe's mountain-bike culture, which gives it a local feel that fits the town. It is the kind of place I like after a day outside, for an easy meal with friends, or when you want something laid-back on Mountain Road.",
+    }],
+    overviewTitle: 'What to understand before you buy or sell in Stowe.',
+    overview: [
+      'Stowe is a lifestyle and resort market, which means buyers are often evaluating use as much as ownership. Mountain access, second-home logistics, rental potential, and long-term positioning all factor into the right decision.',
+      'I help clients read the market through that lens \u2014 weighing village proximity, views, privacy, ski access, and carrying costs against the scarcity of genuinely comparable homes.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Mount Mansfield, resort access, village charm, restaurants, trails, and four-season tourism that keeps second-home interest strong.' },
+      { title: 'Property lens', body: 'Resort-area homes require careful review of association documents, rental restrictions, property management, winter systems, and access.' },
+      { title: 'Due diligence', body: 'I look closely at heating systems, roof and snow-load, furnishings, permitting, and whether the home truly supports the intended use.' },
+    ],
+  },
+  waterbury: {
+    name: 'Waterbury', region: 'Waterbury \u00b7 Vermont',
+    lede: "A central Vermont village with strong access to Stowe, the Mad River Valley, I-89, and year-round outdoor recreation — a practical market for buyers who want mountain access without being fully resort-based.",
+    photo: 'waterbury-vt-real-estate.png',
+    photoAlt: 'Aerial view of Waterbury Vermont with the village and surrounding Green Mountains',
+    photoCaption: 'Waterbury, Vermont',
+    hiddenGems: [
+      {
+        name: 'Country Club of Vermont',
+        label: 'Golf',
+        url: 'https://www.countryclubvt.com/',
+        copy: "When I want to make time for golf around Waterbury, the Country Club of Vermont is one of the places that stands out. The setting feels distinctly Vermont — quiet, scenic, and tucked into Waterbury Center — and it is the kind of place where the surroundings are as much a part of the experience as the round itself.",
+      },
+      {
+        name: 'Prohibition Pig',
+        label: 'Restaurant worth the stop',
+        url: 'https://www.prohibitionpig.com/',
+        copy: "For food, Prohibition Pig is one of my go-to Waterbury recommendations. It sits right in the heart of town and pairs a lively, casual atmosphere with smoked meats and fresh beer. It is an easy stop after a day in the mountains and a place I would send someone who wants a taste of Waterbury's local character.",
+      },
+    ],
+    overviewTitle: 'A mountain gateway with everyday livability.',
+    overview: [
+      'Waterbury is valued for its location: close to Stowe, close to Burlington and Montpelier by interstate, and surrounded by trails, rivers, ski access, and local food culture.',
+      'I help buyers and sellers think through commute, flood-zone considerations, village versus country settings, and how proximity to the mountains shapes demand.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by Stowe access, I-89 convenience, restaurants, recreation, and a strong year-round community feel.' },
+      { title: 'Property lens', body: 'Village homes, country properties, and mountain-access homes require different pricing and due-diligence questions.' },
+      { title: 'Due diligence', body: 'I review flood considerations, systems, access, land characteristics, and how each property fits the buyer\'s intended use.' },
+    ],
+  },
+  'jay-peak': {
+    name: 'Jay Peak', region: 'Jay Peak \u00b7 Northern Vermont',
+    lede: "A northern Vermont resort market centered on Jay Peak Resort, deep winter demand, vacation ownership, and four-season recreation near the Canadian border.",
+    photo: 'jay-peak-vt-real-estate.png',
+    photoAlt: 'Jay Peak Vermont surrounded by vivid autumn foliage',
+    photoCaption: 'Jay Peak, Vermont',
+    hiddenGems: [{
+      name: 'October in the Northeast Kingdom',
+      label: 'Fall foliage',
+      copy: "One of my favorite times to be around Jay Peak is October, when the mountain and surrounding Northeast Kingdom turn into a wall of fall color. You do not need an elaborate itinerary here — drive the back roads, stop when the view opens up, and give yourself time to enjoy the trees. It is one of those stretches of Vermont that reminds you how different this part of the state feels in every season.",
+    }],
+    overviewTitle: 'A ski and second-home market with distinct dynamics.',
+    overview: [
+      'Jay Peak real estate is shaped by resort access, rental potential, winter systems, association terms, and the realities of owning in a remote mountain setting.',
+      'I help clients evaluate ski access, carrying costs, management, rental rules, and whether a property supports the way they actually want to use it.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by Jay Peak Resort, deep snow, golf, waterpark amenities, and second-home interest from Vermont, New England, and Canada.' },
+      { title: 'Property lens', body: 'Condos, townhomes, and chalets need careful review of HOA terms, rental programs, furnishings, and winter maintenance.' },
+      { title: 'Due diligence', body: 'I look closely at heating, access roads, association rules, rental history, and seasonal ownership costs.' },
+    ],
+  },
+  shelburne: {
+    name: 'Shelburne', region: 'Shelburne \u00b7 Vermont',
+    lede: "A coveted lakeside town known for Shelburne Farms, the Museum, and estate properties set against Lake Champlain and open farm country just south of Burlington.",
+    photo: 'shelburne-vt-real-estate.png',
+    photoAlt: 'Aerial view of Shelburne Vermont at sunset with Lake Champlain, farms, and village buildings',
+    photoCaption: 'Shelburne, Vermont',
+    hiddenGems: [
+      {
+        name: 'Shelburne Farms',
+        label: 'A place I always recommend',
+        copy: "Shelburne Farms is one of those places that captures what makes this part of Vermont special. I like it for the lake views, the working landscape, and the chance to slow down and spend a few hours walking the property. Whether you are visiting for the first time or already know Shelburne well, it is a place I think is always worth making time for.",
+        url: 'https://shelburnefarms.org/',
+      },
+      {
+        name: 'Shelburne Museum',
+        label: 'Local culture worth exploring',
+        copy: "Shelburne Museum is another place I recommend because it feels completely different from a traditional museum visit. The campus is spread across historic buildings and open grounds, so you can wander through art, design, architecture, and Vermont history at your own pace. It is an easy way to spend an afternoon and get a better feel for the character of Shelburne.",
+        url: 'https://shelburnemuseum.org/',
+      },
+    ],
+    overviewTitle: 'A blend of estate living and working landscape.',
+    overview: [
+      "Shelburne pairs some of the region\'s most distinctive estates with rolling agricultural land, lake frontage, and a strong sense of place. Buyers here often prioritize land, privacy, and proximity to Burlington.",
+      'Value is shaped by acreage, views, water access, and the character of the home \u2014 details that reward an advisor who knows how the area actually trades.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by lake access, large parcels, top schools, and the cultural draw of Shelburne Farms and the Shelburne Museum.' },
+      { title: 'Property lens', body: 'Estate and acreage properties call for review of land use, septic and well systems, outbuildings, and frontage rights.' },
+      { title: 'Due diligence', body: 'I examine surveys, easements, shoreline regulations, and the condition of older or architecturally significant homes.' },
+    ],
+  },
+  charlotte: {
+    name: 'Charlotte', region: 'Charlotte \u00b7 Vermont',
+    lede: "Rolling farmland, long lake and mountain views, and generous acreage make Charlotte one of Chittenden County's most sought-after rural-luxury markets.",
+    overviewTitle: 'Space, views, and a strong school district.',
+    overview: [
+      'Charlotte appeals to buyers who want land and privacy without giving up access to Burlington. Properties range from historic farmhouses to modern homes on significant acreage.',
+      'Pricing turns on view corridors, land quality, and proximity to the lake \u2014 along with the strength of the CVU school district that draws families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by acreage, panoramic views, lake access, and a school district families actively relocate for.' },
+      { title: 'Property lens', body: 'Rural properties require attention to wells, septic, agricultural use, and the condition of older structures.' },
+      { title: 'Due diligence', body: 'I review surveys, current-use enrollment, access, and the systems that older country homes depend on.' },
+    ],
+  },
+  burlington: {
+    name: 'Burlington', region: 'Burlington \u00b7 Vermont',
+    lede: "Vermont\'s largest city pairs a vibrant waterfront and downtown with historic neighborhoods \u2014 a market where walkability, character, and lake proximity command real premiums.",
+    overviewTitle: 'City living on Lake Champlain.',
+    overview: [
+      'From the Hill Section\u2019s historic homes to downtown condos and waterfront properties, Burlington offers a range few Vermont markets can match. Location, era, and condition all carry weight.',
+      'I help buyers and sellers understand neighborhood nuance \u2014 how proximity to the waterfront, Church Street, and UVM shapes both lifestyle and value.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Fueled by the waterfront, downtown culture, UVM and the medical center, and limited inventory in the most desirable neighborhoods.' },
+      { title: 'Property lens', body: 'Historic homes and condos require review of age, systems, rental rules, and association structures.' },
+      { title: 'Due diligence', body: 'I assess condition of older housing stock, zoning, short-term rental regulations, and renovation potential.' },
+    ],
+  },
+  'south-burlington': {
+    name: 'South Burlington', region: 'South Burlington \u00b7 Vermont',
+    lede: "Vermont\'s fast-growing second city offers established neighborhoods, newer construction, strong schools, and unmatched convenience to Burlington and the airport.",
+    photo: 'south-burlington-vt-real-estate.png',
+    photoAlt: 'Green landscape in South Burlington Vermont with mountain views under a blue sky',
+    photoCaption: 'South Burlington, Vermont',
+    hiddenGems: [
+      {
+        name: 'Vermont National Country Club',
+        label: 'My home country club',
+        copy: "Vermont National is a place that means a lot to me personally and one I always associate with South Burlington. It offers a polished golf experience in a setting that still feels relaxed and distinctly Vermont. For anyone who plays or simply wants a sense of the lifestyle side of the area, it is one of the places I would point to first.",
+      },
+      {
+        name: 'Burlington Bagel Bakery',
+        label: 'Best bagel in Vermont',
+        url: 'https://www.burlingtonbagelbakery.com/',
+        copy: "For a casual local stop, Burlington Bagel is one of my favorites in South Burlington. It is the kind of spot I recommend because it is easy, consistently good, and genuinely local. If someone asks me for a quick breakfast or coffee stop in the area, this is usually one of the first places I mention.",
+      },
+    ],
+    overviewTitle: 'Convenience, schools, and steady demand.',
+    overview: [
+      'South Burlington draws buyers who want modern homes, amenities, and an easy commute. Inventory spans established subdivisions, new construction at City Center, and lake-adjacent pockets.',
+      'Value reflects neighborhood, age and condition, and proximity to schools, retail, and major routes \u2014 with consistently strong, broad-based demand.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by schools, retail, the airport, employment access, and ongoing investment in the City Center district.' },
+      { title: 'Property lens', body: 'A mix of eras means careful attention to updates, systems, HOA terms, and lot characteristics.' },
+      { title: 'Due diligence', body: 'I evaluate condition, energy efficiency, association rules, and how each home compares within its neighborhood.' },
+    ],
+  },
+  stratton: {
+    name: 'Stratton', region: 'Stratton \u00b7 Southern Vermont',
+    lede: "A premier southern-Vermont ski destination, Stratton centers on its mountain resort and village \u2014 a second-home market driven by access, amenities, and rental potential.",
+    overviewTitle: 'A resort market with its own logic.',
+    overview: [
+      'Stratton buyers weigh ski-in/ski-out access, village proximity, amenities, and rental flexibility. Ownership is often as much about use and convenience as long-term appreciation.',
+      'I help clients navigate association structures, seasonal access, and the tradeoffs that define resort ownership in southern Vermont.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Anchored by Stratton Mountain Resort, village amenities, golf and recreation, and steady second-home interest.' },
+      { title: 'Property lens', body: 'Condos and chalets require review of association rules, rental programs, fees, and management.' },
+      { title: 'Due diligence', body: 'I look at heating and snow systems, access roads, rental history, furnishings, and seasonal carrying costs.' },
+    ],
+  },
+  williston: {
+    name: 'Williston', region: 'Williston \u00b7 Vermont',
+    lede: "Williston combines new construction, established neighborhoods, and the convenience of Taft Corners \u2014 a practical, in-demand choice for buyers who value access.",
+    photo: 'williston-vt-real-estate.png',
+    photoAlt: 'Aerial view of Williston Vermont in autumn with roads, trees, and distant mountain views',
+    photoCaption: 'Williston, Vermont',
+    hiddenGems: [{
+      name: 'Lake Iroquois',
+      label: 'Outdoor escape',
+      url: 'https://www.lakeiroquois.org/',
+      copy: "Lake Iroquois is one of the places I like recommending because it gives Williston a quieter outdoor side that people do not always expect. It is an easy place to get outside, spend time by the water, and understand why this area appeals to buyers who want convenience without giving up access to Vermont’s natural setting.",
+    }],
+    overviewTitle: 'Convenience and modern inventory.',
+    overview: [
+      'Williston is one of the area\u2019s most convenient towns, with retail, employment, and easy interstate access. Buyers find newer homes and well-kept established neighborhoods.',
+      'Value is shaped by neighborhood, age and condition, lot, and proximity to schools and services \u2014 with reliably strong demand from commuters and families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Taft Corners convenience, employment, interstate access, and a range of newer housing.' },
+      { title: 'Property lens', body: 'Newer subdivisions and HOAs require review of association terms, builder quality, and lot specifics.' },
+      { title: 'Due diligence', body: 'I assess condition, energy systems, association rules, and how a home is positioned within its neighborhood.' },
+    ],
+  },
+  jericho: {
+    name: 'Jericho', region: 'Jericho \u00b7 Vermont',
+    lede: "A quiet, scenic town in the shadow of Mount Mansfield, Jericho offers larger lots, rural character, and an easy connection to both Burlington and the mountains.",
+    photo: 'jericho-vt-real-estate.jpg',
+    photoAlt: 'Old Red Mill beside the Browns River in Jericho Vermont',
+    photoCaption: 'Jericho, Vermont',
+    overviewTitle: 'Rural character with mountain access.',
+    overview: [
+      'Jericho appeals to buyers who want space, privacy, and natural beauty while staying within reach of Burlington. Homes range from historic village properties to country homes on acreage.',
+      'Value reflects land, views, condition, and location \u2014 with the trails, recreation, and small-town character that define the area.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by mountain views, recreation, larger lots, and a quiet, established community feel.' },
+      { title: 'Property lens', body: 'Country and village homes require attention to wells, septic, heating systems, and access.' },
+      { title: 'Due diligence', body: 'I review surveys, systems, and the condition of older homes common throughout the town.' },
+    ],
+  },
+  richmond: {
+    name: 'Richmond', region: 'Richmond \u00b7 Vermont',
+    lede: "Set along the Winooski River between Burlington and the mountains, Richmond offers small-town charm, walkable amenities, and easy access in every direction.",
+    photo: 'richmond-vt-real-estate.png',
+    photoAlt: 'Quiet rural road in Richmond Vermont with a red barn and green hills',
+    photoCaption: 'Richmond, Vermont',
+    hiddenGems: [{
+      name: "Sweet Simone's",
+      label: 'Bakery worth the stop',
+      url: 'https://www.sweetsimones.com/',
+      copy: "Sweet Simone’s is one of my favorite Richmond recommendations because it fits the town so well: warm, local, and easy to love. It is the kind of place I would send someone for coffee, a pastry, or a casual stop while getting a feel for the village. For buyers who want a true sense of Richmond’s community feel, this is a good place to start.",
+    }],
+    overviewTitle: 'Small-town charm, central location.',
+    overview: [
+      'Richmond combines a welcoming village, riverside setting, and a location that splits the difference between city and mountains. It draws buyers who want community and convenience.',
+      'Value reflects proximity to the village and interstate, lot and condition, and the character that makes the town distinct.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by the village, river access, recreation, and a central location with quick routes to Burlington and Stowe.' },
+      { title: 'Property lens', body: 'A mix of historic and newer homes calls for attention to systems, condition, and flood considerations near the river.' },
+      { title: 'Due diligence', body: 'I review condition, systems, flood zones where relevant, and how each home compares locally.' },
+    ],
+  },
+  hinesburg: {
+    name: 'Hinesburg', region: 'Hinesburg \u00b7 Vermont',
+    lede: "A growing community with open land, a friendly village, and the strong CVU school district \u2014 Hinesburg offers space and value within reach of Burlington.",
+    overviewTitle: 'Open land and a strong community.',
+    overview: [
+      'Hinesburg attracts buyers looking for land, a real sense of community, and access to a top school district. Inventory ranges from village homes to country properties on acreage.',
+      'Value reflects land, condition, and location relative to the village and commuting routes, with steady, family-driven demand.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by the CVU school district, open land, a growing village, and relative value compared with neighboring towns.' },
+      { title: 'Property lens', body: 'Rural and village homes require review of wells, septic, land use, and the condition of older structures.' },
+      { title: 'Due diligence', body: 'I examine surveys, systems, current-use status, and access for properties on acreage.' },
+    ],
+  },
+  colchester: {
+    name: 'Colchester', region: 'Colchester \u00b7 Vermont',
+    lede: "With extensive Lake Champlain shoreline around Malletts Bay, Colchester pairs waterfront living and beaches with established family neighborhoods and convenient access.",
+    photo: 'colchester-vt-real-estate.png',
+    photoAlt: 'Sailboats on Lake Champlain near Mallets Bay in Colchester Vermont',
+    photoCaption: 'Mallets Bay, Colchester, Vermont',
+    hiddenGems: [{
+      name: 'Mallets Bay',
+      label: 'Lake Champlain access',
+      url: 'https://vermont.com/cities/mallets-bay/',
+      copy: "Mallets Bay is one of the places I point people to when they want to understand Colchester’s connection to Lake Champlain. The lake access, boating, shoreline views, and easygoing feel give this part of town a lifestyle that is very different from a typical suburban market. For buyers who care about being close to the water, it is one of Colchester’s biggest draws.",
+    }],
+    overviewTitle: 'Lake living with everyday convenience.',
+    overview: [
+      'Colchester offers a rare combination of shoreline, recreation, and convenience. Buyers range from those seeking waterfront and seasonal camps to families in established neighborhoods.',
+      'Value turns on water access and frontage, neighborhood, condition, and proximity to the interstate, the bay, and Burlington.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Malletts Bay, beaches, boating, and a wide range of housing from waterfront to family neighborhoods.' },
+      { title: 'Property lens', body: 'Waterfront and seasonal properties require review of frontage, shoreline rules, septic, and winterization.' },
+      { title: 'Due diligence', body: 'I assess shoreline regulations, water and septic systems, flood considerations, and seasonal-to-year-round conversions.' },
+    ],
+  },
+  essex: {
+    name: 'Essex', region: 'Essex \u00b7 Vermont',
+    lede: "Essex and Essex Junction offer established neighborhoods, strong schools, and everyday convenience \u2014 a practical, family-friendly market with good value near Burlington.",
+    photo: 'essex-vt-real-estate.jpg',
+    photoAlt: 'Aerial view of Essex Vermont village at dusk',
+    photoCaption: 'Essex, Vermont',
+    hiddenGems: [{
+      name: 'The Essex Resort & Spa',
+      label: 'A resort-style local escape',
+      url: 'https://essexresort.ibe.stayntouch.com/search-results?accessCode=RENEW&gad_source=1&gad_campaignid=23704912494&gbraid=0AAAAA-BM19rr_FSj6ePT-3fjGEIByp6-r',
+      copy: "The Essex Resort & Spa is one of the places I like pointing people to because it shows a different side of Essex. It feels tucked away and relaxed, but still close to everything that makes the area convenient. Whether someone is looking for a dinner, a spa day, or a weekend-style reset without leaving Chittenden County, it is a polished local option worth knowing.",
+    }],
+    overviewTitle: 'Family-friendly, convenient, and well-rounded.',
+    overview: [
+      'Essex draws buyers who want established neighborhoods, amenities, and an easy commute. Inventory spans village homes near the Junction, subdivisions, and properties with more land toward the town\u2019s edges.',
+      'Value reflects neighborhood, schools, condition, and proximity to employment and services \u2014 with steady, broad-based demand from families.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Supported by schools, major employers, retail and dining at the Junction, and a wide range of housing at relative value.' },
+      { title: 'Property lens', body: 'A mix of eras means attention to updates, systems, lot characteristics, and any association terms.' },
+      { title: 'Due diligence', body: 'I evaluate condition, energy efficiency, and how each home compares within its neighborhood and price point.' },
+    ],
+  },
+  'south-hero': {
+    name: 'South Hero', region: 'South Hero \u00b7 Lake Champlain Islands',
+    lede: "A Lake Champlain island community with shoreline homes, open land, vineyards, and a quiet pace within reach of Burlington and the Champlain Valley.",
+    hiddenGems: [{
+      name: 'Two Heroes Brewery',
+      label: 'Local brewery stop',
+      url: 'https://www.twoheroesbrewery.com/',
+      copy: "Two Heroes Brewery is one of the places I would point people to in South Hero because it fits the relaxed, island-town feel of the area. It is an easy stop when you want something casual, local, and connected to the pace of life in the Champlain Islands. For buyers trying to understand South Hero beyond the lake views, it gives a good sense of the community’s character.",
+    }],
+    overviewTitle: 'Island living with lake-driven value.',
+    overview: [
+      'South Hero appeals to buyers looking for waterfront, views, privacy, and a more relaxed island setting. Properties range from seasonal cottages to year-round lake homes and country residences.',
+      'Value is shaped by frontage, water access, views, septic and water systems, flood considerations, and year-round usability.'
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Driven by Lake Champlain frontage, boating, views, land, and the lifestyle appeal of the Islands.' },
+      { title: 'Property lens', body: 'Waterfront and island properties require close review of shoreline rules, septic, wells, access, and seasonal limitations.' },
+      { title: 'Due diligence', body: 'I evaluate frontage, flood zones, systems, road access, and whether a property functions year-round or seasonally.' },
+    ],
+  },
+  winooski: {
+    name: 'Winooski', region: 'Winooski \u00b7 Vermont',
+    lede: "Vermont\'s most walkable small city, Winooski has transformed its historic mill district into a vibrant, amenity-rich downtown with strong rental and ownership demand.",
+    photo: 'winooski-vt-real-estate.jpg',
+    photoAlt: 'Winooski Falls and downtown Winooski Vermont',
+    photoCaption: 'Winooski, Vermont',
+    hiddenGems: [
+      {
+        name: 'Onion City',
+        label: 'Local character',
+        url: 'https://www.onioncityvt.com/',
+        copy: "Onion City is one of the places I like recommending in Winooski because it captures the town’s creative, energetic feel. It is casual, local, and very much tied into the personality of downtown Winooski — the kind of spot that helps someone understand why people are drawn to this small city.",
+      },
+      {
+        name: 'Tiny Thai Restaurant',
+        label: 'Restaurant worth the stop',
+        url: 'https://www.tinythairestaurant.net/',
+        copy: "Tiny Thai is an easy Winooski recommendation. It has become one of those local restaurants people know and come back to, and it fits perfectly with the walkable, independent feel around the traffic circle. If someone wants a simple food stop that feels true to the area, this is one I would point them toward.",
+      },
+    ],
+    overviewTitle: 'Walkable, revitalized, and in demand.',
+    overview: [
+      'Winooski packs restaurants, culture, and convenience into a compact, walkable footprint. Inventory leans toward condos, converted mill buildings, and close-in homes.',
+      'Value reflects walkability, condition, rental potential, and proximity to the downtown circle and Burlington just across the river.',
+    ],
+    cards: [
+      { title: 'Local demand', body: 'Fueled by walkability, dining and culture, proximity to Burlington, and strong interest from younger buyers and investors.' },
+      { title: 'Property lens', body: 'Condos and converted buildings require review of association structures, rental rules, and building systems.' },
+      { title: 'Due diligence', body: 'I evaluate association documents, short-term rental regulations, condition, and parking where it matters.' },
+    ],
+  },
+};
+
+const ALL = [
+  ['stowe', 'Stowe'], ['waterbury', 'Waterbury'], ['jay-peak', 'Jay Peak'], ['shelburne', 'Shelburne'], ['charlotte', 'Charlotte'], ['burlington', 'Burlington'],
+  ['south-burlington', 'South Burlington'], ['stratton', 'Stratton'], ['williston', 'Williston'], ['jericho', 'Jericho'],
+  ['richmond', 'Richmond'], ['hinesburg', 'Hinesburg'], ['colchester', 'Colchester'], ['south-hero', 'South Hero'], ['winooski', 'Winooski'], ['essex', 'Essex'],
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const slug = this.props.slug || 'stowe';
+    const baseTown = TOWNS[slug] || TOWNS.stowe;
+    const hiddenGems = (baseTown.hiddenGems || []).map((gem, index) => ({
+      ...gem,
+      number: String(index + 1).padStart(2, '0'),
+      url: gem.url || '#',
+      ctaLabel: gem.ctaLabel || (gem.url ? 'Visit ' + gem.name : ''),
+      linkStyle: gem.url ? '' : 'display:none;',
+    }));
+    const town = {
+      ...baseTown,
+      photo: baseTown.photo || 'lake-champlain.jpg',
+      photoAlt: baseTown.photoAlt || '',
+      photoCaption: baseTown.photoCaption || '',
+      photoSectionStyle: baseTown.photo
+        ? 'background: #fffdf8; padding: 0 0 clamp(70px, 8vw, 105px); border-top: 1px solid rgba(23,49,41,0.08);'
+        : 'display:none;',
+      hiddenGems,
+      hiddenGemLayout: hiddenGems.length === 1 ? 'is-single' : 'is-multiple',
+      hiddenGemSectionStyle: hiddenGems.length ? '' : 'display:none;',
+    };
+    const others = ALL.filter(([s]) => s !== slug).map(([s, name]) => ({ name, href: s + '-vt-real-estate.html' }));
+    return { town, others };
+  }
+}
+</script>
+</body>
+</html>
