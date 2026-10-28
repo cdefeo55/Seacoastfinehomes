@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://skylerdavisgroup.com/sitemap.xml
+Sitemap: https://seacoastfinehomes.com/sitemap.xml
